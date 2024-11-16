@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "bettervcr";
+        src: url("../public/bettervcr.ttf") format("truetype");
+    };
+
+    :root {
+        font-family: "bettervcr";
+    }
+};
