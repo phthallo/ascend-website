@@ -24,7 +24,7 @@ model Component {
   requires  String[]
 }
 
-model Vehicle {
+model Construct {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

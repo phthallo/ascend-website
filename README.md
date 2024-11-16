@@ -14,7 +14,7 @@ If you make a change to `schema.prisma`, run `npx prisma migrate dev --name "a d
 
 Then run `npx prisma db seed` to make your changes reflect in the database.
 
-If you want to overwrite all existing data, do `npx prisma migrate --force` instead as the above command will seed in addition to the existing database.
+If you want to overwrite all existing data, do `npx prisma migrate reset --force` instead as the above command will seed in addition to the existing database.
 
 
 components: this is where reusable assets go

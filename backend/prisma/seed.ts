@@ -22,7 +22,7 @@ const componentData: Prisma.ComponentCreateInput[] = [
   },
 ]
 
-const vehicleData: Prisma.VehicleCreateInput[] = [
+const constructData: Prisma.ConstructCreateInput[] = [
   {
     name: 'Rocket',
     content: 'A thing that flies!',
@@ -45,11 +45,11 @@ async function main() {
     console.log(`Created component with id: ${component.id}`)
   }
 
-  for (const u of vehicleData) {
-    const vehicle = await prisma.vehicle.create({
+  for (const u of constructData) {
+    const construct = await prisma.construct.create({
       data: u,
     })
-    console.log(`Created vehicle with id: ${vehicle.id}`)
+    console.log(`Created construct with id: ${construct.id}`)
   }
   console.log(`Seeding finished.`)
 }
