@@ -6,6 +6,12 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "../frontend/",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -16,7 +22,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "exclude": [
     "node_modules"
