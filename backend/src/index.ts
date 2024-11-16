@@ -18,7 +18,17 @@ app.get(`/material/:id`, async (req, res) => {
   res.json(post)
 })
 
-app.get(`/material/:id`, async (req, res) => {
+app.get(`/construct/:id`, async (req, res) => {
+  const { id } = req.params
+  const post = await prisma.material.findUnique({
+    where: {
+      id: Number(id),
+    },
+  })
+  res.json(post)
+})
+
+app.get(`/component/:id`, async (req, res) => {
   const { id } = req.params
   const post = await prisma.material.findUnique({
     where: {

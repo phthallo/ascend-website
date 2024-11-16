@@ -18,7 +18,7 @@ const componentData: Prisma.ComponentCreateInput[] = [
   {
     name: 'Rocket Head',
     content: 'The top of the rocket',
-    requires: ['Metal']
+    requires: {"1": 1}
   },
 ]
 
@@ -26,7 +26,7 @@ const constructData: Prisma.ConstructCreateInput[] = [
   {
     name: 'Rocket',
     content: 'A thing that flies!',
-    requires: ['Rocket Head']
+    requires: {"1": 1, "2": 1}
   },
 ]
 

@@ -21,7 +21,7 @@ model Component {
   updatedAt DateTime @updatedAt
   name      String
   content   String?
-  requires  String[]
+  requires  Json
 }
 
 model Construct {
@@ -30,5 +30,5 @@ model Construct {
   updatedAt DateTime @updatedAt
   name      String
   content   String?
-  requires  String[]
+  requires  Json
 }
