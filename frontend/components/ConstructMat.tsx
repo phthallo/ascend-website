@@ -38,7 +38,7 @@ const ConstructMat = () => {
               <li key={index} className="mt-2">
                 <input type="checkbox" id={`material${index}`} />
                 <label htmlFor={`material${index}`} className="ml-2">
-                  {material}
+                  <a href = {`material/${index+1}`}>{material}</a>
                 </label>
               </li>
             ))}
