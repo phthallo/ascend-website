@@ -17,7 +17,7 @@ const ConstructMat = () => {
   };
 
   return (
-    <div className="bg-[#111f45] rounded-2xl mx-10 h-auto text-center flex flex-col items-center">
+    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto text-center flex flex-col items-center">
       <div className="block font-bettervcr text-[#de8af5] text-3xl text-left leading-none py-10">
         <div className="text-[#de8af5]">
           <select
