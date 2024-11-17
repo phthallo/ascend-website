@@ -1,4 +1,4 @@
-#**Stellar Blueprints**
+#Stellar Blueprints
 
 <br>A website for instructions on how to build the next spacecraft</br>
 
