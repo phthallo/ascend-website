@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ConstructMat = () => {
   // State to hold selected option and materials
   const [selectedOption, setSelectedOption] = useState("1");
-  const [materials, setMaterials] = useState(["Material A", "Material B", "Material C"]);
+  const [materials, setMaterials] = useState(["5x Metal [001] ", "2x Bolts [003]", "3x Plastic [002]"]);
 
   // Material mapping based on selection
   const materialOptions = {
