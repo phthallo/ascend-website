@@ -2,6 +2,7 @@
 
 <br>A website for instructions on how to build the next spacecraft</br>
 
-![alt text](https://github.com/phthallo/ascend-website/blob/main/image-1.png)
+![alt text](![buildyourspacecraft](https://github.com/user-attachments/assets/f7cd29bc-13e2-4eff-b640-4f92d888f58f)
+
 <br>Choose from the given components</br>
 
