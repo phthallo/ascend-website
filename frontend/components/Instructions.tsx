@@ -5,8 +5,9 @@ const Instructions = () => {
         <div className="text-[#de8af5]">
           <h3 className="text-xl">Instructions</h3>
         </div>
-        <div className="flex justify-center items-center rounded-2xl overflow-hidden ">
-          <p className="text-sm pt-9">Connect 001 and 002 with bolt [003]</p>
+        <div className="block justify-center items-center rounded-2xl overflow-hidden ">
+          <p className="text-sm pt-2">Connect 001 and 002 with bolt [003]</p>
+          <p className="text-sm pt-1">Connect 001 and 002 with bolt [003]</p>
         </div>
       </div>
     </div>
