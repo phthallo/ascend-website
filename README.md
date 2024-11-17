@@ -1,7 +1,7 @@
 https://github.com/prisma/prisma-examples/tree/latest/orm/rest-nextjs-api-routes
 
 https://github.com/prisma/prisma-examples/tree/latest/orm/rest-nextjs-express 
-to get started, clone repo and run npm install
+to get started, clone repo and run npm install in backend and frontend.
 
 start the backend before you test anything w/ frontend
 
@@ -14,7 +14,7 @@ If you make a change to `schema.prisma`, run `npx prisma migrate dev --name "a d
 
 Then run `npx prisma db seed` to make your changes reflect in the database.
 
-If you want to overwrite all existing data, do `npx prisma migrate reset np--force` instead as the above command will seed in addition to the existing database.
+If you want to overwrite all existing data, do `npx prisma migrate reset --force` instead as the above command will seed in addition to the existing database.
 
 
 components: this is where reusable assets go
@@ -24,6 +24,6 @@ styles: global css file.
 
 to do: 
 - files in /pages should be relevant to project 
-- update [id] slug to vehicle 
+- ~~update [id] slug to vehicle~~
 - find somewhere to host
-- migrate components from old repo
+- ~~migrate components from old repo~~

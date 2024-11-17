@@ -20,6 +20,11 @@ const componentData: Prisma.ComponentCreateInput[] = [
     content: 'The top of the rocket',
     requires: {"1": 1}
   },
+  { 
+    name: 'Rocket Body',
+    content: 'The body of the rocket',
+    requires: {"1": 2, "2": 1}
+  }
 ]
 
 const constructData: Prisma.ConstructCreateInput[] = [
@@ -27,6 +32,18 @@ const constructData: Prisma.ConstructCreateInput[] = [
     name: 'Rocket',
     content: 'A thing that flies!',
     requires: {"1": 1, "2": 1}
+  },
+
+  {
+    name: 'Satellite',
+    content: 'A thing that stands!',
+    requires: {"1": 1, "2": 1}
+  },
+
+  {
+    name: 'Rover',
+    content: 'A thing that roves!',
+    requires: {"1": 2, "2": 1}
   },
 ]
 

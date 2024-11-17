@@ -20,7 +20,7 @@ app.get(`/material/:id`, async (req, res) => {
 
 app.get(`/construct/:id`, async (req, res) => {
   const { id } = req.params
-  const post = await prisma.material.findUnique({
+  const post = await prisma.construct.findUnique({
     where: {
       id: Number(id),
     },
@@ -28,13 +28,28 @@ app.get(`/construct/:id`, async (req, res) => {
   res.json(post)
 })
 
+app.get(`/construct/`, async (req, res) => {
+  const post = await prisma.construct.findMany()
+  res.json(post)
+})
+
 app.get(`/component/:id`, async (req, res) => {
   const { id } = req.params
-  const post = await prisma.material.findUnique({
+  const post = await prisma.component.findUnique({
     where: {
       id: Number(id),
     },
   })
+  res.json(post)
+})
+
+app.get(`/component/`, async (req, res) => {
+  const post = await prisma.component.findMany()
+  res.json(post)
+})
+
+app.get(`/material/`, async (req, res) => {
+  const post = await prisma.material.findMany()
   res.json(post)
 })
 

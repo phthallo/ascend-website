@@ -5,19 +5,23 @@ import Layout from '../../components/Layout'
 import Router from 'next/router'
 import { ComponentProps } from '../../components/Component'
 
-const Component: React.FC<ComponentProps> = props => {
-  let name = props.name
-  let content = props.content
-  let requires = props.requires
+const Component: React.FC<ComponentProps[]> = (props) => {
   return (
     <Layout>
       <div>
-        <h2>{name}</h2>
-        <p>{content}</p>
-        <div>{(Object.keys(requires)).map((requirement) => (
-          <div>COMPONENT ID: <a href = {`/component/${requirement}`}>{requirement}</a> QUANTITY: {requires[requirement]}</div>
-        ))}
-      </div>
+      <h2>
+          {
+            (Object.values(props)).map((prop) => (
+          <div>
+            <div>{prop.name}</div> 
+            <div>Description: {prop.content}</div>
+            <div>{(Object.keys(prop.requires)).map((requirement) => (
+              <div>COMPONENT ID: <a href = {`/component/${requirement}`}>{requirement}</a> QUANTITY: {prop.requires[requirement]}</div>
+            ))}</div>
+          </div>
+          ))}
+          </h2>
+
       </div>
       <style jsx>{`
         .page {
@@ -44,8 +48,8 @@ const Component: React.FC<ComponentProps> = props => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3001/component/${context.params.id}`)
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch(`http://localhost:3001/component/`)
   const data = await res.json()
   return { props: { ...data } }
 }

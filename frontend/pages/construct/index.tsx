@@ -5,20 +5,22 @@ import Layout from '../../components/Layout'
 import Router from 'next/router'
 import { ConstructProps } from '../../components/Construct'
 
-const Construct: React.FC<ConstructProps> = props => {
-  let name = props.name
-  let content = props.content
-  let requires = props.requires
-
+const Construct: React.FC<ConstructProps[]> = (props) => {
   return (
     <Layout>
       <div>
-        <h2>{name}</h2>
-        <p>{content}</p>
-        <div>{(Object.keys(requires)).map((requirement) => (
-          <div>COMPONENT ID: <a href = {`/component/${requirement}`}>{requirement}</a> QUANTITY: {requires[requirement]}</div>
-        ))}
-      </div>
+        <h2>
+          {
+            (Object.values(props)).map((prop) => (
+          <div>
+            <div>{prop.name}</div> 
+            <div>Description: {prop.content}</div>
+            <div>{(Object.keys(prop.requires)).map((requirement) => (
+              <div>COMPONENT ID: <a href = {`/component/${requirement}`}>{requirement}</a> QUANTITY: {prop.requires[requirement]}</div>
+            ))}</div>
+          </div>
+          ))}
+          </h2>
       </div>
       <style jsx>{`
         .page {
@@ -45,8 +47,8 @@ const Construct: React.FC<ConstructProps> = props => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3001/construct/${context.params.id}`)
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch(`http://localhost:3001/construct/`)
   const data = await res.json()
   return { props: { ...data } }
 }
