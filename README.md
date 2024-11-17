@@ -14,6 +14,23 @@ The prompt for this project was an instructionary app for building spacecraft, c
 ## Stack
 Next.js, React and TailwindCSS, with Prisma for the backend. 
 
-
+## Development
+If you're reading this, it's probably not online :( 
+1. You can preview this locally by cloning the repository:
+```
+git clone https://github.com/phthallo/ascend-website
+```
+2. Install dependencies
+```
+cd ascend-website/backend && npm install
+cd ascend-website/frontend && npm install
+```
+3. Add your Prisma API key in an `.env` file in `backend/prisma`
+4. Add `SITE="generic site"` in an `.env` file in `frontend`. (Yes, defining a value is necessary)
+5. Start the server (start the backend before the frontend)
+```
+cd backend && npm run dev
+cd frontend && npm run dev
+```
 ### Collaborators
 Louisa, Fatuma, Annabel
