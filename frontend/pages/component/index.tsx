@@ -27,8 +27,8 @@ const Component: React.FC<ComponentProps[]> = (props) => {
                 <td>
                   {Object.keys(prop.requires).map((requirement, reqIndex) => (
                     <div key={reqIndex}>
-                      COMPONENT ID:{" "}
-                      <a className="text-[#de8af5] underline" href={`/component/${requirement}`}>
+                      MATERIAL ID:{" "}
+                      <a className="text-[#de8af5] underline" href={`/material/${requirement}`}>
                         {requirement}
                       </a>
                       , QUANTITY: {prop.requires[requirement]}
