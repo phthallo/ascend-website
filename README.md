@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/0b94655e-a399-4b47-8056-265fb99f428b)
 
 ## <br>Build Space</br>
-![buildyourspacecraft](https://github.com/user-attachments/assets/f7cd29bc-13e2-4eff-b640-4f92d888f58f)
+![image](https://github.com/user-attachments/assets/23bef110-6b2c-44a7-b5eb-8144640b7b9b)
 <br>Stellar Blueprints gives instructions on how to build a space-technology such as satellite dishes and rockets. As you go through the steps instructions are given to guide you along the way. Don't worry about **failure**. The system checks as you go along.</br>
 
 ## <br>Lists of components</br>
