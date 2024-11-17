@@ -2,12 +2,15 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import ReactMarkdown from "react-markdown";
 import Layout from "../../components/Layout";
+import Header from "../../components/Header";
+
 import Router from "next/router";
 import { ConstructProps } from "../../components/Construct";
 
 const Construct: React.FC<ConstructProps[]> = (props) => {
   return (
     <Layout>
+      <Header/>
       <div className="bg-[#232D50] h-screen font-bettervcr text-center flex flex-col items-center text-[#de8af5] pt-10">
         <table className="w-screen">
           <thead>
