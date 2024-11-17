@@ -5,7 +5,7 @@ const Header = () => {
         <h1 className="col-span-2 text-[#de8af5] text-3xl text-center pr-14 pl-10 leading-none">
           <a href="/">generic name</a>
         </h1>
-        <a className="align-middle items-center col-span-2 text-[#de8af5] text-2xl text-center leading-tight" href="./buildspace">
+        <a className="align-middle items-center col-span-2 text-[#de8af5] text-2xl text-center leading-tight" href="./allitems">
           all materials
         </a>
       </div>
