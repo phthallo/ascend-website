@@ -6,8 +6,8 @@ const Instructions = () => {
           <h3 className="text-xl">Instructions</h3>
         </div>
         <div className="block justify-center items-center rounded-2xl overflow-hidden ">
-          <p className="text-sm pt-2">Connect 001 and 002 with bolt [003]</p>
-          <p className="text-sm pt-1">Connect 001 and 002 with bolt [003]</p>
+          <p className="text-sm pt-2">Attach Booster 1 and Booster 2 with Nuts [004]</p>
+          <p className="text-sm pt-1">Secure payload (Made with 001 and 005) with Bolt [R003]</p>
         </div>
       </div>
     </div>
