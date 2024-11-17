@@ -7,9 +7,9 @@ const ConstructMat = () => {
 
   // Material mapping based on selection
   const materialOptions = {
-    "1": ["5x Metal", "2x Bolts", "3x Plastic"],
-    "2": ["6x Metal", "2x Bolts"],
-    "3": ["5x Metal", "2x Bolts", "3x Plastic", "1x FibreGlass"],
+    "1": ["5x Metal [001] ", "2x Bolts [003]", "3x Plastic [002]"],
+    "2": ["6x Metal [001]", "2x Bolts [003]"],
+    "3": ["5x Metal [001]", "2x Bolts [003]", "3x Plastic [002]", "1x FibreGlass [005]"],
   };
 
   // Handle change in select option
