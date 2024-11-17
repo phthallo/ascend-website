@@ -1,4 +1,5 @@
-# Stellar Blueprints - ## A website for instructions on how to build the next spacecraft
+# Stellar Blueprints 
+## <br>A website for instructions on how to build the next spacecraft</br>
 
 ![image](https://github.com/user-attachments/assets/0b94655e-a399-4b47-8056-265fb99f428b)
 <br>Stellar Blueprints gives instructions on how to build a space-technology such as satellite dishes and rockets. As you go through the steps instructions are given to guide you along the way. Don't worry about **failure**. The system checks as you go along.</br>
