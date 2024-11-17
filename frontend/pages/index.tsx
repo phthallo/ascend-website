@@ -5,7 +5,7 @@ import TestChecks from "@components/TestChecks";
 
 const Home = () => {
   return (
-    <div className="bg-[#111f45] h-ful">
+    <div className="bg-[#111f45] h-full pb-6 overflow-y-hidden">
       <Header />
 
       <div className="grid grid-cols-3">
