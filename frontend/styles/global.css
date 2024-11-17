@@ -12,4 +12,8 @@
     :root {
         font-family: "bettervcr";
     }
+    th{padding-bottom:30px;}
+    td{
+        padding:9px;
+    }
 };
