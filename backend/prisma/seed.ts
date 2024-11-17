@@ -11,6 +11,22 @@ const materialData: Prisma.MaterialCreateInput[] = [
   { 
     name: 'Plastic',
     content: 'A piece of plastic'
+  },
+  { 
+    name: 'Bolts',
+    content: 'Not a nut.'
+  },
+  { 
+    name: 'Nuts',
+    content: 'Not a bolt.'
+  },
+  { 
+    name: 'Fiberglass',
+    content: 'Glass that is fibre'
+  },
+  { 
+    name: 'Carbon fibre',
+    content: 'Carbon that is fibre'
   }
 ]
 
@@ -31,19 +47,19 @@ const constructData: Prisma.ConstructCreateInput[] = [
   {
     name: 'Rocket',
     content: 'A thing that flies!',
-    requires: {"1": 1, "2": 1}
+    requires: {"1": 4, "2": 3, "3": 4, "4": 2}
   },
 
   {
     name: 'Satellite',
     content: 'A thing that stands!',
-    requires: {"1": 1, "2": 1}
+    requires: {"1": 1, "2": 1, "3": 2, "5": 1}
   },
 
   {
     name: 'Rover',
     content: 'A thing that roves!',
-    requires: {"1": 2, "2": 1}
+    requires: {"1": 2, "2": 1, "4": 2, "6": 1}
   },
 ]
 

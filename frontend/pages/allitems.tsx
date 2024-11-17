@@ -1,5 +1,8 @@
 import Header from "@components/Header";
-const AllItems = () => {
+import { GetServerSideProps } from 'next';
+import { MaterialProps } from '@components/Material';
+
+const AllItems: React.FC<MaterialProps[]> = (props) => {
   return (
     <div className="bg-[#111f45] h-full text-[#de8af5] block items-center align-middle text-center font-bettervcr">
       <Header />
@@ -12,50 +15,24 @@ const AllItems = () => {
           </tr>
         </thead>
         <tbody>
+        {
+            (Object.values(props)).map((prop) => (
           <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
+            <td>{prop.id}</td> 
+            <td><a href = {`/material/${prop.id}`}>{prop.name}</a></td>
+            <td>{prop.content}</td>
           </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>010100001</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch(`http://localhost:3001/material/`)
+  const data = await res.json()
+  return { props: { ...data } }
+}
 
 export default AllItems;

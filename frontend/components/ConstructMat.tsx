@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 
 const dir = {
   "1": "Metal",
-  "2": "Plastic"
+  "2": "Plastic",
+  "3": "Bolts",
+  "4": "Nuts",
+  "5": "Fiberglass",
+  "6": "Carbon fiber"
 }
 const ConstructMat = () => {
     const [selectedValue, setSelectedValue] = useState('1');
     const [data, setData] = useState(null);
-    const [constructs, setConstructs] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const handleDropdownChange = (event) => {
@@ -58,7 +61,7 @@ const ConstructMat = () => {
                 <li className="mt-2">
                     <input type="checkbox"/>
                     <label htmlFor="material1" className="ml-2">
-                    {`${String(dat)[2]}x ${dir[String(dat)[0][0]]} (ID [${String(dat)[0][0]}])`}
+                    <a href = {`/material/${dat[0][0]}`}> {`${String(dat)[2]}x ${dir[String(dat)[0][0]]} (ID [${String(dat)[0][0]}])`} </a>
                   </label>
                   </li>
                 ) : null}

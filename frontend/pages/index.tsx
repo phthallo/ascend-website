@@ -7,13 +7,16 @@ import TestChecks from "@components/TestChecks";
 
 const Home = () => {
   return (
-    <div className="bg-[#111f45] h-full pb-6 overflow-y-hidden">
+    <div className="bg-[#111f45] h-full w-full pb-6 overflow-y-hidden">
       <Header />
-      <div className="grid grid-cols-3">
-        <div className="col-span-1">
+      <div className="grid grid-cols-9">
+        <div className="col-span-3">
           <ConstructMat />
           <Instructions />
           <TestChecks />
+          </div>
+          <div className="col-span-6 mr-20">
+          <img className = "mx-auto w-max h-full object-cover rounded-xl bg-[#232d50]" src = "./satellite/satelliteDish1.png"></img>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const TestChecks = () => {
   };
 
   return (
-    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto mt-7 font-neuebit text-center block space-x-4 items-center py-4  align-middle">
+    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto mt-5 font-neuebit text-center block space-x-4 items-center py-4  align-middle">
       {checked.map((isChecked, index) => (
         <input
           key={index}
