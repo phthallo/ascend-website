@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 
 const ConstructMat = () => {
-  // State to hold selected option and materials
   const [selectedOption, setSelectedOption] = useState("1");
   const [materials, setMaterials] = useState(["5x Metal [001] ", "2x Bolts [003]", "3x Plastic [002]"]);
 
-  // Material mapping based on selection
   const materialOptions = {
     "1": ["5x Metal [001] ", "2x Bolts [003]", "3x Plastic [002]"],
     "2": ["6x Metal [001]", "2x Bolts [003]"],
     "3": ["5x Metal [001]", "2x Bolts [003]", "3x Plastic [002]", "1x FibreGlass [005]"],
   };
 
-  // Handle change in select option
   const handleOptionChange = (event) => {
     const value = event.target.value;
     setSelectedOption(value);
@@ -20,7 +17,7 @@ const ConstructMat = () => {
   };
 
   return (
-    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto text-center flex flex-col items-center">
+    <div className="bg-[#111f45] rounded-2xl mx-10 h-auto text-center flex flex-col items-center">
       <div className="block font-bettervcr text-[#de8af5] text-3xl text-left leading-none py-10">
         <div className="text-[#de8af5]">
           <select
@@ -38,7 +35,7 @@ const ConstructMat = () => {
               <li key={index} className="mt-2">
                 <input type="checkbox" id={`material${index}`} />
                 <label htmlFor={`material${index}`} className="ml-2">
-                  <a href = {`material/${index+1}`}>{material}</a>
+                  <a href={`material/${index + 1}`}>{material}</a>
                 </label>
               </li>
             ))}
