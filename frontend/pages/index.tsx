@@ -1,26 +1,16 @@
-import Header from "@components/Header";
-import ConstructMat from "@components/ConstructMat";
-import Instructions from "@components/Instructions";
-import TestChecks from "@components/TestChecks";
-
-
-
 const Home = () => {
   return (
-    <div className="bg-[#111f45] h-full w-full pb-6 overflow-y-hidden">
-      <Header />
-      <div className="grid grid-cols-9">
-        <div className="col-span-3">
-          <ConstructMat />
-          <Instructions />
-          <TestChecks />
-          </div>
-          <div className="col-span-6 mr-20">
-          <img className = "mx-auto w-max h-full object-cover rounded-xl bg-[#232d50]" src = "./satellite/satelliteDish1.png"></img>
+    <>
+      <div className="bg-[#111f45] h-screen w-full pb-6 font-bettervcr px-20 text-[#de8af5] block items-center align-middle text-center">
+        <div className=" flex items-center align-middle text-center space-x-52 py-48">
+          <h1 className="text-8xl leading-none">Stellar Blueprint</h1>
+          <p className="text-4xl text-right leading-none">Build the next gen of space machinery with Stellar Blueprint</p>
         </div>
+        <button className=" text-[#C382FE] text-3xl px-4 py-2 rounded-xl text-center bg-[#232D50] h-20 w-96">
+          <a href="./buildspace"> Get Started</a>
+        </button>
       </div>
-    </div>
+    </>
   );
 };
-
 export default Home;
