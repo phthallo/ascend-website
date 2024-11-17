@@ -9,19 +9,19 @@ const AllItems: React.FC<MaterialProps[]> = (props) => {
       <table className="w-full text-sm table-fixed h-screen">
         <thead>
           <tr>
-            <th className="text-3xl px-5">ID Number</th>
             <th className="text-3xl px-5">Name</th>
             <th className="text-3xl px-5">Description</th>
+            <th className="text-3xl px-5">ID Number</th>
           </tr>
         </thead>
         <tbody>
           {Object.values(props).map((prop) => (
             <tr>
-              <td>{prop.id}</td>
               <td>
                 <a href={`/material/${prop.id}`}>{prop.name}</a>
               </td>
               <td>{prop.content}</td>
+              <td>{prop.id}</td>
             </tr>
           ))}
         </tbody>
