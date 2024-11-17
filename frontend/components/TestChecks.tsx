@@ -11,8 +11,19 @@ const TestChecks = () => {
     }
   };
 
+  const getNextStepText = () => {
+    const checkedCount = checked.filter(Boolean).length;
+    if (checkedCount === 0) {
+      return "Next step: Start the pre-check sequence.";
+    } else if (checkedCount < checked.length) {
+      return `Next step: Proceed to step ${checkedCount + 1}.`;
+    } else {
+      return "Next step: All systems go! Launch ready.";
+    }
+  };
+
   return (
-    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto mt-5 font-neuebit text-center block space-x-4 items-center py-4  align-middle">
+    <div className="bg-[#232D50] rounded-2xl mx-10 h-auto mt-5 font-neuebit text-center block space-x-4 items-center py-4 align-middle">
       {checked.map((isChecked, index) => (
         <input
           key={index}
@@ -22,7 +33,7 @@ const TestChecks = () => {
           onChange={() => handleCheckboxChange(index)}
         />
       ))}
-      <p className="font-bettervcr text-sm text-[#de8af5] text-center">Next step : Dont explode rocket pls</p>
+      <p className="font-bettervcr text-sm text-[#de8af5] text-center">{getNextStepText()}</p>
     </div>
   );
 };

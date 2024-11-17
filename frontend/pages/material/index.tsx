@@ -8,7 +8,7 @@ import { MaterialProps } from "../../components/Material";
 const Material: React.FC<MaterialProps[]> = (props) => {
   return (
     <Layout>
-      <div className="bg-[#232D50] h-screen font-bettervcr text-center flex flex-col items-center text-[#de8af5] pt-10">
+      <div className="bg-[#111f45] h-screen font-bettervcr text-center flex flex-col items-center text-[#de8af5] pt-10">
         <table className="w-screen">
           <thead>
             <tr>
