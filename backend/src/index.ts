@@ -40,7 +40,7 @@ app.get(`/component/:id`, async (req, res) => {
       id: Number(id),
     },
   })
-  res.json(post)
+  res.status(200).json(post)
 })
 
 app.get(`/component/`, async (req, res) => {
